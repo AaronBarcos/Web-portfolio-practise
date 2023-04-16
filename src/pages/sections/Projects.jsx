@@ -1,6 +1,6 @@
 function Projects() {
   return (
-    <section style={{maxWidth: "1500px"}}>
+    <section className="max-w-7xl">
       <h3>Projects</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias

@@ -25,22 +25,22 @@ function Carousel(props) {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>My Portfolio</h1>
-      <div>
+      <h1>My Portfolio</h1>
+      <div className="flex">
         <button onClick={previous}>{"<"}</button>
         {selectedComponents}
         <button onClick={next}>{">"}</button>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-          <button onClick={() => setSelectedComponents(components[0])}>
-            About me
-          </button>
-          <button onClick={() => setSelectedComponents(components[1])}>
-            Technologies
-          </button>
-          <button onClick={() => setSelectedComponents(components[2])}>
-            Projects
-          </button>
-        </div>
+      </div>
+      <div className="flex justify-center gap-11">
+        <button onClick={() => setSelectedComponents(components[0])}>
+          About me
+        </button>
+        <button onClick={() => setSelectedComponents(components[1])}>
+          Technologies
+        </button>
+        <button onClick={() => setSelectedComponents(components[2])}>
+          Projects
+        </button>
       </div>
     </div>
   );

@@ -2,15 +2,16 @@ import { useState } from "react";
 import Carousel from "./Carousel";
 
 export default function Sidebar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const sidebarStyle = {
-    width: open ? '50px' : '300px',
-    transition: 'width 300ms ease-in-out'
+    width: '100%',
+    height: open ? '50px' : '300px',
+    transition: 'height 300ms ease-in-out'
   };
 
   return (
-    <div className="flex">
+    <div>
       <div
         className="flex flex-col h-screen p-3 bg-gray-800 shadow"
         style={sidebarStyle}
@@ -18,7 +19,7 @@ export default function Sidebar() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-bold text-white">
-              {open === false ? "Código" : null}{" "}
+              {open === false ? "Código" : "Código"}{" "}
             </h2>
             <button onClick={() => setOpen(!open)}>
               <svg
@@ -39,7 +40,9 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
+      <div className="flex justify-center" >
       <Carousel />
+      </div>
     </div>
   );
 }
