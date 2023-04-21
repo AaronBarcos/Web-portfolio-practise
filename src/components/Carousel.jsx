@@ -9,6 +9,8 @@ function Carousel(props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedComponents, setSelectedComponents] = useState(components[0]);
 
+  const darkMode = "text-black dark:text-white"
+
   const previous = () => {
     if (selectedIndex > 0) {
       setSelectedIndex(selectedIndex - 1);
@@ -25,20 +27,19 @@ function Carousel(props) {
 
   return (
     <div>
-      <h1>My Portfolio</h1>
       <div className="flex">
         <button onClick={previous}>{"<"}</button>
         {selectedComponents}
         <button onClick={next}>{">"}</button>
       </div>
       <div className="flex justify-center gap-11">
-        <button onClick={() => setSelectedComponents(components[0])}>
+        <button className={darkMode} onClick={() => setSelectedComponents(components[0])}>
           About me
         </button>
-        <button onClick={() => setSelectedComponents(components[1])}>
+        <button className={darkMode} onClick={() => setSelectedComponents(components[1])}>
           Technologies
         </button>
-        <button onClick={() => setSelectedComponents(components[2])}>
+        <button className={darkMode} onClick={() => setSelectedComponents(components[2])}>
           Projects
         </button>
       </div>

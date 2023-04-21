@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Carousel from "./Carousel";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(true);
@@ -41,7 +40,6 @@ export default function Sidebar() {
         </div>
       </div>
       <div className="flex justify-center" >
-      <Carousel />
       </div>
     </div>
   );
